@@ -9,35 +9,73 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-top-banner-plugin@latest/dist/style.css" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" />
+
   <!-- katx -->
+
 </head>
 
 <body>
   <div id="app"></div>
   <script>
+    var num = 0;
+    mermaid.initialize({ startOnLoad: false })
+
     window.$docsify = {
       name: 'Dragonte的笔记站',
       repo: '',
       coverpage: false,
       maxLevel: 5,
-      subMaxLevel: 2,
+      subMaxLevel: 4,
       mergeNavbar: true,
       loadSidebar: true,
       loadNavbar: true,
 
+      
+darkMode:{
+  dark: {
+    background: "#1c2022",
+    toggleBtnBg: "#34495e",
+    textColor: "#b4b4b4"
+  },
+  light: {
+    background: "white",
+    toggleBtnBg: "var(--theme-color)",
+    textColor: "var(--theme-color)"
+  }
+}
+,
       count: {
         countable: true,
+        float: 'top',
         fontsize: '0.9em',
         color: 'rgb(90,90,90)',
-        language: 'chinese'
+        language: 'chinese',
+
       },
       latex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']], // default
         displayMath: [['$$', '$$']],               // default
-      }
+      },
+      chat: {
+    // chat panel title
+    title: '聊天记录',
+    // set avatar url
+    users: [
+      { nickname: 'yuki', avatar: '' },
+      { nickname: 'Dragonte', avatar: '/1000.png' },
+    ],
+    myself: 'Dragonte',
+      // animation interval (ms)
+      animation: 50,
+      // Panel navigation bar style, supporting "mac" and "windows"
+      os: 'mac',
+  },
 
-
-    }
+    };
   </script>
   <!-- Docsify v4 -->
 
@@ -50,15 +88,34 @@
   <script src="//npm.elemecdn.com/prismjs/components/prism-bash.js"></script>
   <script src="//npm.elemecdn.com/prismjs/components/prism-java.js"></script>
   <script src="//npm.elemecdn.com/prismjs/components/prism-sql.js"></script>
-
+  <!--mermaid-->
+  <script src="//npm.elemecdn.com/mermaid/dist/mermaid.js"></script>
+  <script src="//npm.elemecdn.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
-  <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+
   <!-- CDN files for docsify-katex -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+
+  <!-- <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script>  -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script>
+
+
+  <!-- <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- Docsify script Here -->
+
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+
+<script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+
+  <!-- Docsify Chat -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-chat/lib/docsify-chat.min.js"></script>
 
   <!-- statcounter -->
   <!-- Default Statcounter code for docs2.0 http://dragonte.top -->
