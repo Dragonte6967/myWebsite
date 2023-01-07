@@ -14,4 +14,6 @@
 
 📢让更多人看到
 
+<img src="https://dragonte.top/navbar/qr.png" width="25%"></img>
+
 <!-- chat:end -->
