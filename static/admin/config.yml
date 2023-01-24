@@ -20,5 +20,5 @@ collections:
       - {label: '发布时间', name: 'date', widget: 'datetime'}
       - {label: 'katex', name: 'katex', widget: 'string', default: 'math' } 
       - {label: '简要', name: 'summary', widget: 'string'}
-      - {label: '标签', name: 'tags', widget: 'list', allow_add: true, label_singular: '添加'}
+      - {label: '标签', name: 'tags', widget: 'string', format : 'toml-frontmatter' , allow_add: true, label_singular: '添加'}
       - {label: '正文', name: 'body', widget: 'markdown'}
