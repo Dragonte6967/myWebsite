@@ -2,7 +2,8 @@
 title = ""
 date = {{ .Date }}
 author = ""
-keywords = ["", ""]
-cover = ""
+tags = ["",""]
 summary = ""
+pin = true
+lastmod = true
 +++
